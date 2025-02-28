@@ -13,7 +13,7 @@ It aims to be compatible with major LLM providers and be as tiny (as the name su
 ```python
 from tinyrag import TinyRAG
 
-myrag = TinyRAG(llm_model='llama3.2')
+rag = TinyRAG(llm_model='llama3.2')
 
 sample_docs = [ # made up info, pass any text here
     "Zephyr Quantum was founded in 2023 by Dr. Voss in Maple Ridge, BC.",

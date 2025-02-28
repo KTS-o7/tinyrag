@@ -10,10 +10,13 @@ tinyrag is a "tiny" RAG implementation that aims to give developers a plug and p
 It aims to be compatible with major LLM providers and be as tiny (as the name suggests) as possible while doing so.
 
 ## Usage
+Before you run tinyrag make sure you have pulled the following models from the ollama repo:
+- [Nomic Text Embeddings](https://ollama.com/library/nomic-embed-text)
+- Any large language model of your choice from the ollama library
 ```python
-from tinyrag import TinyRAG
+from tinyrag.tinyrag import TinyRAG_Ollama
 
-rag = TinyRAG(llm_model='llama3.2')
+rag = TinyRAG_Ollama(llm_model='llama3.2:1b')
 
 sample_docs = [ # made up info, pass any text here
     "Zephyr Quantum was founded in 2023 by Dr. Voss in Maple Ridge, BC.",
@@ -28,12 +31,9 @@ sample_docs = [ # made up info, pass any text here
     "17 patents filed, 9 granted as of January 2025."
 ]
 
-rag.add_documents(sample_docs)
-result = rag.query("How much funding did they get and who led the round?")
+rag.add_documents(sample_docs) # add custom instructions to the LLM here if required
+result = rag.query("What's Zephyr Quantums largest client? and give me more info about who their other clients are, be super verbose about it (do not makeup info and stick to the context)")
 print(result)
-
-# Output: "Based on the information, Doc led the round and received $8.7M in funding for Q4 2024."
-
 ```
 
 ## Current features:
@@ -44,6 +44,7 @@ print(result)
 - Add support to more embedding models
 - Currently only plaintext documents are supported, so support for database files, spreadsheets, documents, ppts, etc
 - Support more endpoints such as Open AI, Claude, Deepseek, etc
+- Multimodal embedding support
 
 ## Contribution | Issues/Bug reports
 Contributions are always welcome! Make sure to test your forks before making a PR. \

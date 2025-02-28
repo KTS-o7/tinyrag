@@ -45,6 +45,7 @@ print(result)
 - Currently only plaintext documents are supported, so support for database files, spreadsheets, documents, ppts, etc
 - Support more endpoints such as Open AI, Claude, Deepseek, etc
 - Multimodal embedding support
+- Chroma DB/Custom Vector DBs support
 
 ## Contribution | Issues/Bug reports
 Contributions are always welcome! Make sure to test your forks before making a PR. \

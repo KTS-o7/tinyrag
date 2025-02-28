@@ -46,6 +46,7 @@ print(result)
 - Support more endpoints such as Open AI, Claude, Deepseek, etc
 - Multimodal embedding support
 - Chroma DB/Custom Vector DBs support
+- Implement FAISS from scratch
 
 ## Contribution | Issues/Bug reports
 Contributions are always welcome! Make sure to test your forks before making a PR. \

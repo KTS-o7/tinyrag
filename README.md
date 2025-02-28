@@ -13,6 +13,13 @@ It aims to be compatible with major LLM providers and be as tiny (as the name su
 Before you run tinyrag make sure you have pulled the following models from the ollama repo:
 - [Nomic Text Embeddings](https://ollama.com/library/nomic-embed-text)
 - Any large language model of your choice from the ollama library
+
+Install using pip: 
+```sh
+pip install tinyrag
+```
+
+Example usage:
 ```python
 from tinyrag.tinyrag import TinyRAG_Ollama
 
